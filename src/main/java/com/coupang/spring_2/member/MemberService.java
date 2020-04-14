@@ -4,9 +4,15 @@ public class MemberService {
 
 	private MemberDAO memberDAO;
 
-	public MemberService() {
-		memberDAO = new MemberDAO();
+//	public MemberService(MemberDAO memberDAO) {			constructor
+//		this.memberDAO = memberDAO;
+//	}
+	
+	
+	public void setMemberDAO(MemberDAO memberDAO) {			//property
+		this.memberDAO = memberDAO;
 	}
+
 
 	public int memberUpdate(MemberVO memberVO) throws Exception {
 		return memberDAO.memberUpdate(memberVO);
