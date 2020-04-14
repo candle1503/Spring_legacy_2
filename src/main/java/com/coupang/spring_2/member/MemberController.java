@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value="/member/**")
 public class MemberController {
 
-	@RequestMapping(value="memberLogin", method = RequestMethod.GET)
+	@RequestMapping(value="memberLogin")
 	public void memberLogin(){
 	}
 	
@@ -17,7 +17,7 @@ public class MemberController {
 		return "redirect:../";
 	}
 	
-	@RequestMapping(value = "memberJoin", method = RequestMethod.GET)
+	@RequestMapping(value = "memberJoin")
 	public void memberJoin() {
 	}
 	
@@ -30,13 +30,13 @@ public class MemberController {
 	public void memberPage() {
 	}
 	
-	@RequestMapping(value = "memberUpdate", method = RequestMethod.POST)
-	public void memberUpdate() {
-	}
-	
-	@RequestMapping(value = "memberUpdate", method = RequestMethod.GET)
+	@RequestMapping(value = "memberUpdate")
 	public String memberUpdatePost() {
 		return "redirect:../";
+	}
+	
+	@RequestMapping(value = "memberUpdate", method = RequestMethod.POST)
+	public void memberUpdate() {
 	}
 	
 	@RequestMapping(value = "memberDelete")
