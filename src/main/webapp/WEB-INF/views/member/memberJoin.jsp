@@ -19,7 +19,7 @@
     <div class="form-group">
       <label for="Id">ID:</label>
 
-      <input type="text" class="form-control" id="id" placeholder="Enter ID" name="id" >
+      <input type="text" class="form-control" id="id" placeholder="Enter ID" name="id" value="${id}">
     </div>
     
     <div class="form-group">
@@ -39,7 +39,7 @@
    
    <div class="form-group">
       <label for="Email:">Email:</label>
-      <input type="text" class="form-control" id="email:" placeholder="Enter Email:" name="email:">
+      <input type="text" class="form-control" id="email" placeholder="Enter Email:" name="email">
 
     </div>
    
