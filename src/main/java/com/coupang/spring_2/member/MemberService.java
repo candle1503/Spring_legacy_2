@@ -4,14 +4,14 @@ public class MemberService {
 
 	private MemberDAO memberDAO;
 
-//	public MemberService(MemberDAO memberDAO) {			constructor
-//		this.memberDAO = memberDAO;
-//	}
-	
-	
-	public void setMemberDAO(MemberDAO memberDAO) {			//property
+	public MemberService(MemberDAO memberDAO) {			
 		this.memberDAO = memberDAO;
 	}
+	
+	
+//	public void setMemberDAO(MemberDAO memberDAO) {			//property
+//		this.memberDAO = memberDAO;
+//	}
 
 
 	public int memberUpdate(MemberVO memberVO) throws Exception {

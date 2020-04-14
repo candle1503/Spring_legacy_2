@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.coupang</groupId>
-	<artifactId>s3</artifactId>
-	<name>Spring_Legacy_3</name>
+	<artifactId>s2</artifactId>
+	<name>Spring_Legacy_2</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	

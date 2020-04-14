@@ -36,20 +36,5 @@ public class HomeController {
 		
 		return "index";
 	}
-	@RequestMapping(value="/test", method = RequestMethod.GET)
-	public String test() {
-		System.out.println("Test 실행");
-		return "test";
-	}
-	@RequestMapping(value="/test2", method = RequestMethod.GET)
-	public String test2() {
-		System.out.println("Test2 실행");
-		return "test2";
-	}
-	@RequestMapping(value="/test3", method = RequestMethod.GET)
-	public String test3() {
-		System.out.println("Test3 실행");
-		return "sub/test3";
-	}
 	
 }
