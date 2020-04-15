@@ -5,6 +5,13 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
+		
+	<!-- BoardDAO boardDAO = new BoardDAO() -->	
+	<bean class="com.coupang.spring_2.board.BoardDAO" id="boardDAO"></bean>
+	<bean class="com.coupang.spring_2.board.BoardService" id="boardService">
+		<constructor-arg name="boardDAO" ref="boardDAO"></constructor-arg>	
+	</bean>	
+		
 	<!-- PointDAO pointDAO = new PointDAO(); -->	
 	<bean class="com.coupang.spring_2.point.PointDAO" id="pointDAO"></bean>
 	<bean class="com.coupang.spring_2.point.PointService" id="pointService">
