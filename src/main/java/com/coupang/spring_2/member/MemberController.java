@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping(value="/member/**")
 public class MemberController {
 
-	@Autowired			//controller에서는 autowired로
+	@Autowired			
 	private MemberService memberservice;
 	
 	@RequestMapping(value="memberLogin")
@@ -53,7 +53,7 @@ public class MemberController {
 		if(result >0) {
 			mv.setViewName("common/result");
 			mv.addObject("result", memberVO.getId()+"님 환영합니다");
-			mv.addObject("path", "../");
+			mv.addObject("path", "../member/memberLogin");
 		}else {
 			mv.setViewName("common/result");
 			mv.addObject("result", memberVO.getId()+"아이디 중복입니다");

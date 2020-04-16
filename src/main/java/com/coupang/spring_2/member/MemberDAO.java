@@ -5,8 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Repository;
+
 import com.coupang.util.DBConnector;
 
+@Repository
 public class MemberDAO {
 
 

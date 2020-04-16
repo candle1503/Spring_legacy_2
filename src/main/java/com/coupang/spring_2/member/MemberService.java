@@ -6,18 +6,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class MemberService {
 
-	private MemberDAO memberDAO;
 	
-	@Autowired
-	public MemberService(MemberDAO memberDAO) {			
-		this.memberDAO = memberDAO;
-	}
-	
-	
+	 @Autowired private MemberDAO memberDAO;
+	 
+	/*
+	 * @Autowired public MemberService(MemberDAO memberDAO) { 
+	 * this.memberDAO =	 memberDAO; }
+	 */
+
 //	public void setMemberDAO(MemberDAO memberDAO) {			//property
 //		this.memberDAO = memberDAO;
 //	}
-
 
 	public int memberUpdate(MemberVO memberVO) throws Exception {
 		return memberDAO.memberUpdate(memberVO);
