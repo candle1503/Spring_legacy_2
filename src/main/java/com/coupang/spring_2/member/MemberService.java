@@ -1,9 +1,14 @@
 package com.coupang.spring_2.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class MemberService {
 
 	private MemberDAO memberDAO;
-
+	
+	@Autowired
 	public MemberService(MemberDAO memberDAO) {			
 		this.memberDAO = memberDAO;
 	}

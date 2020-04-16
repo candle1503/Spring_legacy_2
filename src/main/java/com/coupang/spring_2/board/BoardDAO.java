@@ -32,14 +32,14 @@ public class BoardDAO {
 	
 	
 	//4. boardDelete
-	public int boardDelete(String num) throws Exception{
+	public int boardDelete(int num) throws Exception{
 		Connection con = DBConnector.getConnection();
 		
 		String sql = "delete board where num = ?";
 		
 		PreparedStatement st = con.prepareStatement(sql);
 		
-		st.setString(1, num);
+		st.setInt(1, num);
 		
 		int result = st.executeUpdate();
 		

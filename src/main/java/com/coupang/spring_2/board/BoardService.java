@@ -16,7 +16,7 @@ public class BoardService {
 	}
 	
 	//4. delete
-	public int boardDelete(String num) throws Exception{
+	public int boardDelete(int num) throws Exception{
 		return boardDAO.boardDelete(num);
 	}
 	

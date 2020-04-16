@@ -2,6 +2,7 @@ package com.coupang.spring_2.board;
 
 import java.util.ArrayList;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,10 +67,14 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="boardAdd", method = RequestMethod.POST)
-	public ModelAndView boardAddPost(ModelAndView mv, BoardVO boardVO, HttpSession session) throws Exception{
+	public ModelAndView boardAddPost(ModelAndView mv, BoardVO boardVO, HttpSession session,HttpServletRequest request) throws Exception{
 		MemberVO memberVO = (MemberVO)session.getAttribute("member");
 		boardVO.setId(memberVO.getId());	
-	int result = boardService.boardAdd(boardVO);
+		int result = boardService.boardAdd(boardVO);
+		System.out.println(request.getParameter("text"));
+		System.out.println(request.getParameter("subject"));
+		System.out.println(boardVO.getText());
+		System.out.println(boardVO.getSubject());
 	
 		mv.addObject("path", "../board/boardList");
 		mv.addObject("result", "게시물 추가 완료");
@@ -78,5 +83,15 @@ public class BoardController {
 		return mv;
 	}
 	
+	@RequestMapping(value= "boardDelete")
+	public ModelAndView boardDelete(ModelAndView mv, BoardVO boardVO) throws Exception{
+		
+		int result = boardService.boardDelete(boardVO.getNum());
+		
+		mv.addObject("path", "../board/boardList");
+		mv.addObject("result", "게시물 삭제 완료");
+		mv.setViewName("common/result");
+		return mv;
+	}
 }
 
